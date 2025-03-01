@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Messenger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='birdmessage.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Chicken Messenger</h1>
+        <p class="instruction">Click on the chicken to lay an egg and reveal the message!</p>
+
+        <div class="bird-container">
+            <div class="clickable-area">
+                <img src="{{ url_for('static', filename='bird.png') }}" alt="A chicken" id="bird">
+            </div>
+            <img src="{{ url_for('static', filename='egg.png') }}" alt="Egg" id="egg">
+            <img src="{{ url_for('static', filename='egg-cracked.png') }}" alt="Cracked Egg" id="cracked-egg">
+        </div>
+
+        <p id="secret-message"></p> <!-- Secret message dynamically loaded -->
+    </div>
+
+    <script src="{{ url_for('static', filename='birdmessage.js') }}"></script>
+</body>
+</html>
